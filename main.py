@@ -12,8 +12,8 @@ MODEL_ID = "meta-llama/Llama-4-Scout-17B-16E"
 
 # Load HuggingFace LLM via LlamaIndex
 llm = HuggingFaceLLM(
-    model_name="meta-llama/Llama-4-Scout-17B-16E",
-    tokenizer_name="meta-llama/Llama-4-Scout-17B-16E",
+    model_name="meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+    tokenizer_name="meta-llama/Llama-4-Maverick-17B-128E-Instruct",
     device_map="auto",
     model_kwargs={"torch_dtype": torch.float16},  # Pass dtype within model_kwargs
     # Other parameters as needed
