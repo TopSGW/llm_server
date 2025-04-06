@@ -12,11 +12,13 @@ MODEL_ID = "meta-llama/Meta-Llama-4-Scout"
 
 # Load HuggingFace LLM via LlamaIndex
 llm = HuggingFaceLLM(
-    model_name=MODEL_ID,
-    tokenizer_name=MODEL_ID,
+    model_name="meta-llama/Meta-Llama-4-Scout",
+    tokenizer_name="meta-llama/Meta-Llama-4-Scout",
     device_map="auto",
-    dtype=torch.float16,
+    model_kwargs={"torch_dtype": torch.float16},  # Pass dtype within model_kwargs
+    # Other parameters as needed
 )
+
 
 class PromptRequest(BaseModel):
     prompt: str
