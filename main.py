@@ -8,12 +8,12 @@ from pydantic import BaseModel
 app = FastAPI()
 
 # LLaMA 4 Scout Model ID
-MODEL_ID = "meta-llama/Meta-Llama-4-Scout"
+MODEL_ID = "meta-llama/Llama-4-Scout-17B-16E"
 
 # Load HuggingFace LLM via LlamaIndex
 llm = HuggingFaceLLM(
-    model_name="meta-llama/Meta-Llama-4-Scout",
-    tokenizer_name="meta-llama/Meta-Llama-4-Scout",
+    model_name="meta-llama/Llama-4-Scout-17B-16E",
+    tokenizer_name="meta-llama/Llama-4-Scout-17B-16E",
     device_map="auto",
     model_kwargs={"torch_dtype": torch.float16},  # Pass dtype within model_kwargs
     # Other parameters as needed
